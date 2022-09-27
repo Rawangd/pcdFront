@@ -1,0 +1,90 @@
+<div class="container" style="border:0px; margin-top: 180px;" >
+
+
+<div >
+    <div style="display: block;" class="row">
+        <div style="align-items:left"> <h1>New CV</h1></div>
+       <div  style="align-items:right"><button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+        aria-controls="collapseExample">
+        Show
+      </button></div>
+      
+        
+
+    </div>
+  
+</div>
+
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card" style="border:0px; ">
+      <div class="card-body" style="border:0px; ">
+          <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <div style="padding-top: 50px;">
+        <div class="container shadow-lg"style="background-color:aliceblue ;">
+          <div class="header">
+            <div class="full-name">
+              <span class="first-name">Mehdi njema</span> 
+            </div><br>
+            <div class="contact-info">
+              <span class="email">Email: </span>
+              <span class="email-val">mehdi@gmail.com</span>
+              <span class="separator"></span>
+              <span class="phone">Phone: </span>
+              <span class="phone-val">55958955</span>
+            </div>
+            
+            <div class="about">
+              <span class="position">Front-End Developer </span>
+              <span class="desc">
+                I am a front-end developer </span>
+            </div>
+          </div>
+           <div class="details">
+            <div class="section">
+              <div class="section__title">Experience</div>
+              
+              <div class="right"> 2 years of experience in talon</div>
+              
+            </div>
+            <div class="section">
+              <div class="section__title">level</div>
+              <div class="right"> Secondary school</div>
+              
+              
+          </div>
+             <div class="section">
+               <div class="section__list">
+                 <div class="section__list-item">
+                   <div class="name">Description</div>
+                   <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+                 </div>
+                 
+                 
+               </div>
+            </div>
+             <div class="section">
+               <div class="section__title">Skills</div>
+              
+               <div class="skills__item">
+                   <div class="left"><div class="name">
+                     CSS</div></div>
+                   
+                 </div>
+                 
+               </div>
+             <div class="section">
+             <div class="section__title">
+               Interests
+               </div>
+               <div class="section__list">
+                 <div class="section__list-item">
+                          Football, programming.
+                  </div>
+               </div>
+             </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>

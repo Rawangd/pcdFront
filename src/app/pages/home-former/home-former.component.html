@@ -1,0 +1,314 @@
+
+
+<nav class="menu" tabindex="0" style="padding-top: 60px;">
+	<div class="smartphone-menu-trigger"></div>
+  <header class="avatar">
+		<img  srcset="data:image/png;base64,{{picture}}" />
+    
+    <h2>{{formerAuthService.loggedUser}}</h2>
+  </header>
+ 
+	<ul>
+    <li tabindex="0" class="icon-messages"><span style="font-size: medium; color: #261d51; font-weight: bold;padding-left: 10px;" routerLink="studentprofile">Profile</span></li>
+
+    <li tabindex="0" class="icon-cv"><span style="font-size: medium; color: #261d51; font-weight: bold;padding-left: 10px;" routerLink="cv">CV</span></li>
+
+
+    <li tabindex="0" class="icon-calendar"><span style="font-size: medium; color: #261d51; font-weight:bold;padding-left: 10px;" routerLink="planning-former">Events</span></li>
+
+    <li tabindex="0" class="icon-suggestions"><span style="font-size: medium; color: #261d51;font-weight:bold;padding-left: 10px;" routerLink="announcement">Announcement </span></li>
+
+    <li tabindex="0" class="icon-add" data-toggle="modal" data-target="#example2Modal" ><span style="font-size: medium; color: #261d51;font-weight:bold;padding-left: 10px;">Post add</span></li>
+   <!---- <hr>
+    <li tabindex="0" class="icon-add" data-toggle="modal" data-target="#exampleModal" ><span style="font-size: medium; color: #261d51;font-weight:bold;padding-left: 10px;">Find new opportunity</span></li>
+   -->
+  </ul>
+
+</nav>
+<main style="background-color: #fafafa; margin-left: 80px; padding-right:2%;">
+  <div class="container1 mt-7" style="padding-top: 5px; margin-left: 235px;margin-right:auto; ">
+    <!-- Table -->
+
+    <div class="row">
+      
+      <div class="col-lg-8 page-content">
+     <div class="row" style="padding-top:60px ;">
+  
+      <div class="col">
+        <div class="container1 shadow" id="card1">
+          <div class="card-header border-0">
+            <h3 class="mb-0">All Trainings</h3>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Status</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let c of courses">
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      
+                      <div class="media-body">
+                        <span class="mb-0 t ext-sm">{{c.courseName}}</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    {{c.price}}
+                  </td>
+                  <td>
+                    <span class="badge badge-dot mr-4">
+                      <i class="bg-success"></i><span style="color:#000 ;">confirmed</span>
+                    </span>
+                  </td>
+                  
+                  
+                  <td class="text-right">
+                    <div class="dropdown">
+                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                        <a class="dropdown-item" href="#">The learner present</a>
+                        <a class="dropdown-item" href="#">The learner absent</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+               
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer py-4">
+            <nav aria-label="...">
+              <ul class="pagination justify-content-end mb-0">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">
+                    <i class="fas fa-angle-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="fas fa-angle-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+    <div class="right-bar col-lg-4">
+      <div class="top-part">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-users">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+        <div class="count">{{count}}</div>
+      </div>
+      <div class="header">All reviews</div>
+      <div class="right-content">
+        
+        <div class="task-box blue" *ngFor="let r of reviews">
+          <div class="description-task">
+            <div class="time">New Review !</div>
+            <div class="task-name">{{r.userName}}</div>
+          </div>
+          
+          <div class="dropdown more-button">
+          
+          <div  class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="accept(loggedEmail,r.id)" >Accept</a>
+            <a class="dropdown-item" (click)="DeleteReview(r.id)" >Refuse</a>
+          </div>
+        </div>
+         
+        </div>
+        
+      </div>
+    </div>
+  
+  </div>
+   
+  </div>
+  
+  
+
+<div class="container shadow-lg" style="margin-top: 160px;background-color: #fff; margin-left: 200px; border-radius: 7px; ">
+
+  <div class="row mt-5" *ngFor="let a of annonces" >
+      <div class="col-lg-4 " >
+        <div class="card"  >
+          <div class="card__header">
+            <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+          </div>
+          <div class="card__body">
+              <div class="text-align">
+            <span class="tag tag-blue" style="font-size:15px;">{{a.jobTitle}}</span>
+            <span class="tag tag-red" style="font-size:15px;">{{a.experience}}</span>
+            <span class="tag tag-brown" style="font-size:15px;">{{a.salary}} DT </span>
+          </div>
+            <h4>{{a.centerName}}</h4>
+            <p>{{a.description}}</p>
+          </div>
+          <div class="card__footer " style="align-items: center;align-self: center;display: flex;">
+              <span class="tag tag-green " style="cursor: pointer;">Apply NOW</span> 
+               </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+</main>
+
+
+
+
+
+<!-------------------->
+
+<div class="modal fade m-auto shadow-lg" id="example2Modal" tabindex="-1" role="dialog" aria-labelledby="example2ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document" style="margin: auto; ">
+    <div class="modal-content" style="padding-top: 15px;">
+      <div class="modal-header " style="align-items: center; align-self: center; display: flex;">
+          <h1 class="modal-title " id="modal-basic-title" style="font-family: cursive; opacity: 80%;" >Upload Trainings</h1>
+         </div>
+        
+         
+        <div class="modal-body" style="margin: 20px;" >
+          <div class="alert alert-success" *ngIf='message==1'   >You have successfully added</div>
+
+          <form class="form-card"   [formGroup]="courseForm">
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-6 flex-column d-flex" style="padding-top: 5px;"> 
+                <label class="form-control-label px-3">Full Name<span class="text-danger"> *</span></label> 
+                <input type="text" name="" id="" formControlName="formerName" class="form-control">             
+              </div>
+              <div class="form-group col-sm-6 flex-column d-flex"> 
+                <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> 
+                <input type="email" name="" id="" ngModel="{{formerEmail}}"  formControlName="formerEmail" class="form-control">             
+              </div>
+          </div>
+            <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex" style="padding-top: 5px;"> 
+                  <label class="form-control-label px-3">City<span class="text-danger"> *</span></label> 
+                  <input type="text" name="" id="" formControlName="city" class="form-control">             
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex"> 
+                  <label class="form-control-label px-3">Phone Number<span class="text-danger"> *</span></label> 
+                  <input type="number" name="" id="" ngModel="{{formerPhoneNumber}}" formControlName="phoneNumber" class="form-control">             
+                </div>
+            </div>
+            <div class="row justify-content-between text-left">
+                <div class="form-group col-sm-6 flex-column d-flex" > 
+                  <label class="form-control-label px-3">Course's Name<span class="text-danger"> *</span></label> 
+                  <input type="text" name="" id="" formControlName="courseName" class="form-control">             
+                </div>
+                <div class="form-group col-sm-6 flex-column d-flex"> 
+                  <label class="form-control-label px-3">price<span class="text-danger"> *</span></label> 
+                  <input type="number" name="" id="" formControlName="price" class="form-control">             
+                </div>
+            </div>
+            
+            <div class="row justify-content-between text-left">
+              <div class="form-group col-sm-6 flex-column d-flex" > 
+                <label class="form-control-label px-3">Picture<span class="text-danger"> *</span></label> 
+                <input type="file" name="" id="" formControlName="picture" class="form-control" (change)="fnChange({event : $event})">
+             </div>
+              <div class="form-group col-sm-6 flex-column d-flex"> 
+                <label for ="category"class="form-control-label px-3" >Category<span class="text-danger"> *</span></label>
+
+                <select class="form-control"  name="category" formControlName="category"  style="border-radius: 20px; border-color: darkgray;" >
+                  <option value=""></option>
+                  <option value="Maths" >Maths</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Languages">Languages</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Dance">Dance</option>
+                  <option value="Music">Music</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Chemistry">Chemistry</option>
+              </select >           
+              </div>
+          </div>
+          
+          <div class="form-group"  style="padding-top: 5px;">                
+            <label class="form-control-label px-3">Description<span class="text-danger"> *</span></label>         
+            <textarea type="text" name="" id="" formControlName="description" class="form-control">  </textarea>            
+          </div>
+        </form>
+              </div>
+        
+              <div class="modal-footer" style="padding-top: 15px; align-self: center; align-items: center;
+              display: flex; padding-bottom: 5px;">
+                <input type="button" class="btn btn-info" data-dismiss="modal" value=" Close" style="border-radius: 20px;" >
+            
+             <input type="button" value="Add " class="btn btn-success" (click)="fnAdd()  " style="border-radius: 20px;">
+           
+                 </div>
+          
+    </div>
+  </div>
+</div>
+<div class="modal fade m-auto shadow-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document" style="margin: auto; ">
+    <div class="modal-content" style="padding-top: 15px;">
+      <div class="modal-header " style="align-items: center; align-self: center; display: flex;">
+          <h2 class="modal-title " id="modal-basic-title" >Are you looking for a new Job!  </h2>
+          
+         </div>
+         <small style="align-items: center; align-self: center; display: flex;">Please complete the following statement</small>
+         <div class="alert alert-success" *ngIf='message==1'  style="margin: 20px;padding-bottom: 5px;" >You have successfully added</div>
+        
+        <form [formGroup]="courseForm">
+         
+        <div class="modal-body" style="margin: 20px;" >
+         
+              <div class="form-group"  style="padding-top: 5px;">
+                <label for="phone" style="padding-bottom: 5px;"><strong>Skills</strong><span class="text-danger"> *</span></label>
+                <textarea type="file" name="" id="" formControlName="skills" class="form-control" (change)="fnChange({event : $event})"></textarea>
+             </div>
+             
+                
+                <div class="form-group"  style="padding-top: 5px;">                
+                  <label for="description" style="padding-bottom: 5px;"><strong>Interests</strong><span class="text-danger"> *</span></label>         
+                  <textarea type="text" name="" id="" formControlName="interests" class="form-control">  </textarea>            
+                </div>
+             
+              </div>
+        
+              <div class="modal-footer" style="padding-top: 15px; align-self: center; align-items: center;
+              display: flex; padding-bottom: 5px;">
+                <input type="button" class="btn btn-info" data-dismiss="modal" value=" Close" style="border-radius: 20px;" >
+            
+             <input type="button" value="Add " class="btn btn-success" (click)="fnAdd()  " style="border-radius: 20px;">
+           
+                 </div>
+          </form>
+    </div>
+  </div>
+</div>
+
+

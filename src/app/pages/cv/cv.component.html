@@ -1,0 +1,69 @@
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<div style="padding-top: 50px;">
+<div class="container shadow-lg" style="background-color:aliceblue ;" *ngFor="let u of user">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">{{u.userFullName}}</span> 
+    </div><br>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">{{u.userEmail}}</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">{{u.userTelephoneNumber}}</span>
+    </div>
+    
+    <div class="about">
+      <span class="position">Job </span>
+      <span class="desc">
+        {{u.userDomain}}</span>
+    </div>
+  </div>
+   <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      
+      <div class="right">{{u.userExperience}}</div>
+      
+    </div>
+    <div class="section">
+      <div class="section__title">level</div>
+      <div class="right">{{u.userLevel}}</div>
+      
+      
+  </div>
+     <div class="section">
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">Description</div>
+           <div class="text">{{u.userDescription}}</div>
+         </div>
+         
+         
+       </div>
+    </div>
+     <div class="section">
+       <div class="section__title">Skills</div>
+      
+       <div class="skills__item">
+           <div class="left"><div class="name">
+             </div>{{u.skills}}</div>
+           
+         </div>
+         
+       </div>
+     <div class="section">
+     <div class="section__title">
+       Interests
+       </div>
+       <div class="section__list">
+         <div class="section__list-item">
+            {{u.interests}}
+          </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>
+<br><br>
+

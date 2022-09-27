@@ -1,0 +1,41 @@
+<div class="main-content" >
+    <div class="container-fluid mt-5" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title text-center">Check your Bills</h4>
+                        
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                          <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th *ngFor="let cell of tableData1.headerRow" class="text-center">{{ cell }}</th>
+                                        <th  class="text-center"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let row of tableData1.dataRows">
+                                        <td *ngFor="let cell of row" class=" text-center">{{cell}}</td>
+                                        <td >
+                                        <div style="align-items: center; align-content: center; display: flex;">
+                                        
+                                        <button class="btn btn-dark btn-sm mt-2" routerLink="userprofile" style="border-radius: 20px;
+                                         background-color: green; margin: 20px; padding-left: 20px; padding-right: 20px;"> Paid <i class="bi bi-cash-coin"></i> </button>
+                                    </div>
+                                    </td>
+
+                                    </tr>
+
+                                </tbody>
+                          </table>
+
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</div>
+
+

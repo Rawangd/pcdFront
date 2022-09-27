@@ -1,0 +1,121 @@
+*,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+      .second
+      {
+          
+          height: 400px;
+          width: auto;
+          margin: auto;
+          border-radius: 40px;
+      }
+      .first {
+          padding-top: 10px;
+        width: 25rem;
+        height: 100%;
+        margin: 0 1rem;
+        position: relative;
+         
+      }
+      .high2{
+        
+        font-size: 35px;
+        color:#000000;
+        margin-left: 80px;
+        
+      }
+      .high3{
+        font-weight: bold;
+        font-style: italic;
+        font-size: larger;
+        text-decoration: underline;
+        color: #eeeeee;
+      }
+      .searchbar {
+        font-size: 2.4rem;
+        width: 25rem;
+        height: 5rem;
+        border: none;
+        outline: none;
+        border-radius: 10rem;
+        padding: 2rem;
+        transition: all 0.1s;
+        transition-delay: 0.1s;
+        background-color:#261d51;
+        opacity: 80%;
+        
+      }
+      input::placeholder{
+          color: #fff;
+      }
+      img{
+        color: #fff;  
+      }
+      .searchbar:hover {
+        width: 27rem;
+        height: 6rem;
+      }
+      .button {
+        height: 2rem;
+        position: absolute;
+        top: 2.2rem;
+        right: 1rem;
+        transition: all 0.1s;
+        transition-delay: 0.1s;
+        color: #fff;
+      }
+      .button:hover {
+        cursor: pointer;
+      }
+      .searchbar:hover + .button {
+        height: 2.5rem;
+        top: 1.8rem;
+        right: 0;
+      }
+     
+      
+
+      .course
+      {
+          background-color: #eff6ff;
+          padding: 50px 100px;
+      }
+      .gha{
+          border-radius: 100%;
+      }
+      .box
+      {
+          border-radius: 20px;
+          background-color: #ffffff;
+          padding: 10px 20px;
+      }
+      .btn{
+          padding-left: 5px;
+          border-radius: 20px;
+          background-color: lightblue;
+          
+      }
+      @media screen and (max-width:600px)
+      {
+          .course
+      {
+          background-color: #eff6ff;
+          padding: 50px 10px;
+      }
+      }
+
+      
+      .gha{
+        height: 140px;
+        width: 140px;
+       
+        padding: 3px;
+        border-radius: 50%;
+        background:var(--primary-color);
+        
+      }
+      

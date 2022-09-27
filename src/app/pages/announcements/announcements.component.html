@@ -1,0 +1,26 @@
+<h1 class="text-center" style="margin-top: 130px;align-items: center; text-align:center;"><strong>All center announcements for new opportunity</strong></h1>
+
+<div class="container-lg shadow-lg" style="margin-top: 70px;background-color: #fff; border-radius: 7px; ">
+
+  <div class="row mt-5" *ngFor="let a of annonces" >
+        <div class="col-lg-4 " >
+          <div class="card"  >
+            <div class="card__header">
+              <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600">
+            </div>
+            <div class="card__body">
+                <div class="text-align">
+              <button class="tag tag-blue" style="font-size:15px;border:0px;">{{a.jobTitle}}</button>
+              <button class="tag tag-red" style="font-size:15px;border:0px;">{{a.experience}}</button>
+              <button class="tag tag-brown" style="font-size:15px;border:0px;">{{a.salary}} DT </button>
+            </div>
+              <h4>{{a.centerName}}</h4>
+              <p>{{a.description}}</p>
+            </div>
+            <div class="card__footer " style="align-items: center;align-self: center;display: flex;">
+                <span class="tag tag-green " style="cursor: pointer;">Apply NOW</span> 
+                 </div>
+          </div>
+        </div>
+    </div>
+  </div>

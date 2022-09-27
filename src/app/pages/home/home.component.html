@@ -1,0 +1,235 @@
+
+<!--background+button-->
+<section class="home" style="padding-top: 60px;">
+    <img src="../../../assets/img/back.jpg">
+    
+    <div class="homecontent" style="padding-top: 6%;" >
+    <h1>Start Learning For  Future bright</h1>
+    <button routerLink="center-former"  class="bv2" >Discover Trainings</button> &nbsp;
+    <button routerLink="thirdof" class="bv"  >Join Now</button>
+    
+    </div>
+    </section>
+
+
+
+
+<!--mini dashbord-->
+    <div class="container mt-5 mb-5" >
+        <div class="row ">
+          <div class="col-sm mt-2 mb-2 ">
+            <div style="background-color:#eeeeee " class="stepBox">
+  
+  
+               <i class="bi bi-calendar-check-fill" style="color:var(--primary-color) "><h2 style="color: #261d51;">{{count}}<br/>cursos</h2></i>
+  
+             </div>
+          </div>
+  
+  
+  
+  
+          <div class="col-sm mt-2 mb-2 ">
+            <div style="background-color: #eeeeee " class="stepBox">
+  
+              <i class="bi bi-patch-check-fill" style="color: var(--primary-color)"><h2 style="color: #261d51;">{{countFormer}}<br/>expert formers</h2></i>
+  
+            </div>
+          </div>
+  
+  
+  
+  
+        <div class="col-sm mt-2 mb-2 ">
+          <div style="background-color: #eeeeee " class="stepBox">
+  
+  
+            <i class="bi bi-people" style="color:var(--primary-color)"><h2 style="color: #261d51;">{{countStudent}}<br/>students</h2></i>
+  
+  
+          </div>
+        </div>
+  
+  
+  
+  
+        <div class="col-sm mt-2 mb-2">
+          <div style="background-color: #eeeeee " class="stepBox">
+  
+  
+            <i class="bi bi-patch-check-fill" style="color: var(--primary-color)"><h2 style="color: #261d51;">{{countCenter}}<br/>Centers</h2></i>
+  
+  
+          </div>
+        </div>
+  
+        </div>
+  
+    </div>
+
+<!--top 6 prof-->
+    <div class="container mt-5 mb-5 box1">
+        <h1 class="text-center"><span class="highlight">certified and starred</span> teachers</h1>
+        <section style="padding-top: 1em" >
+          <div class="row ">
+           <div class="col-md-4" *ngFor="let f of formers">
+              <div class="swiper-slide card hh">
+                <div class="card-content">
+                  <div class="image">
+                    <img  srcset="data:image/png;base64,{{f[1]}}" alt="">
+                  </div>
+                  <div class="media-icons">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-github"></i>
+                  </div>
+                  <div class="name-profession">
+                    <span class="name">{{f[2]}}</span><br>
+                    <span class="profession">{{f[0]}}</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                  <div class="button">
+                    <button class="aboutMe" routerLink="afficheprofile">About Me</button>
+                   <!----<button class="hireMe">Hire Me</button>-->
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </section>
+      
+      <!--- <section style="padding-top: 1em" >
+        <div class="row ">
+          <div class="col-sm mt-2 mb-2">
+      
+            <div class="swiper-slide card">
+              <div class="card-content">
+                <div class="image">
+                  <img src="../../../assets/img/img4.jpg" alt="">
+                </div>
+      
+                <div class="media-icons">
+                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-github"></i>
+                </div>
+      
+                <div class="name-profession">
+                  <span class="name">Someone Name</span>
+                  <span class="profession">Web Developer</span>
+                </div>
+      
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+      
+                <div class="button">
+                  <button class="aboutMe">About Me</button>
+                  <button class="hireMe">Hire Me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+      
+      
+          <div class="col-sm mt-2 mb-2">
+            <div class="swiper-slide card">
+              <div class="card-content">
+                <div class="image">
+                  <img src="../../../assets/img/img5.jpg" alt="">
+                </div>
+      
+                <div class="media-icons">
+                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-github"></i>
+                </div>
+      
+                <div class="name-profession">
+                  <span class="name">Someone Name</span>
+                  <span class="profession">Web Developer</span>
+                </div>
+      
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+      
+                <div class="button">
+                  <button class="aboutMe">About Me</button>
+                  <button class="hireMe">Hire Me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+      
+      
+          <div class="col-sm mt-2 mb-2">
+            <div class="swiper-slide card">
+              <div class="card-content">
+                <div class="image">
+                  <img src="../../../assets/img/img6.jpg" alt="">
+                </div>
+      
+                <div class="media-icons">
+                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-github"></i>
+                </div>
+      
+                <div class="name-profession">
+                  <span class="name">Someone Name</span>
+                  <span class="profession">Web Developer</span>
+                </div>
+      
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+      
+                <div class="button">
+                  <button class="aboutMe">About Me</button>
+                  <button class="hireMe">Hire Me</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        </section>-->
+    </div>    
+    
+    
+    <!--become a teacher-->
+    <div class="container mt-5 " style="background-color:#fff; border-radius: 20px; width:auto ;">
+        
+    </div>
+    <div class="container mt-5 mb-5 teacher">
+      <div class="container mt-5" style="opacity: 60%; background-color: blanchedalmond; border-radius: 20px; width: auto;"><h1 class="text-center high">Share your passions on formiw</h1></div>
+      
+      <p class="text-center"><span class="high2">give private and group lessons and </span> <span class="high3">monetize your knowledge.</span> <br> <br> <a class="btn btn-lg bv3" style="position: relative;"  routerLink="thirdof">join Now </a></p>
+    
+      
+
+    </div>
+

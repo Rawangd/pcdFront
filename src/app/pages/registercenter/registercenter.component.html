@@ -1,0 +1,84 @@
+<div class="main-content "  >
+  <div class="container-fluid mt-5" style="padding-top: 60px; margin-left: auto; margin-right: auto;">
+    <br>
+         <form #myForm="ngForm" (ngSubmit)=" myForm.valid && registerNewCenter(myForm)" class="register col-lg-6 m-auto "  style="font-weight: bold ;font-size: 1.2em; " >
+          
+          <div class="col-md-12 " >
+            
+            <div class="card  mr-4 shadow-lg " style="border-radius: 7px; width: 800px; padding: 30px; margin-left: auto; margin-right: auto;">
+              <a style=" text-align:center; " ><img src="../../../assets/img/welearn4.png" sizes="60px" alt="..." height="60px"> </a>
+          
+              <h2 class="col-lg-6  m-auto" style="font-weight: bold ;font-size: 2em;align-items: center; text-align: center;">Center Registration</h2><br>
+              
+            <div class="row"  >
+              <div class=" col-md-12 alert alert-danger " *ngIf='invalidLogin'  >{{errorMessage}}</div>
+                <div class="col-lg-6 mt-2 mb-2" style="width:200px;">
+                    <label style="text-align:left" style="float:left ;" >Center's name <span class="text-danger" >*</span></label>
+                    <input name="centerName" [(ngModel)]="center.centerName" #centerName="ngModel" [ngClass]="{'is-invalid':myForm.submitted && centerName.invalid}" required   type="text" class="form-control"  >
+                </div>
+                <div class="col-lg-6 mt-2 mb-2" ><!--Director's name -->
+                    <label for="userName" style="float:left ;" >UserName<span class="text-danger">*</span></label>
+                    <input  name="userName" [(ngModel)]="center.userName" #userName="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userName.invalid}" required    type="text" class="form-control"  >
+                </div>
+                <div class="col-lg-12 mt-2 mb-2">
+                    <label style="float:left ;">Email <span class="text-danger" >*</span></label>
+                    <input name="userEmail"  [(ngModel)]="center.userEmail" #userEmail="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userEmail.invalid}" required     type="email" class="form-control"  >
+                </div>
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label  style="float:left ;">Password <span class="text-danger">*</span></label>
+                  <input name="userPassword"  [(ngModel)]="center.userPassword" #userPassword="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userPassword.invalid}" required   type="password"   type="password" class="form-control"  >
+              </div>
+              <div class="col-lg-6 mt-2 mb-2">
+                <label style="float:left ;" >Confirm Password <span class="text-danger">*</span></label>
+                <input name="userConfirmPassword"  ngModel #userConfirmPassword="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userConfirmPassword.invalid}" required   type="password" class="form-control" >
+            </div>
+            <div class="col-lg-12 mt-2 mb-2">
+                <label style="float:left ;" >Address <span class="text-danger">*</span></label>
+              <input name="userAddress"  [(ngModel)]="center.userAddress"  #userAddress="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userAddress.invalid}" required    type="text" class="form-control"  >
+            </div>
+                
+              
+              <div class="col-lg-6 mt-2 mb-2">
+                <label style="float:left ;">Telephone Number <span class="text-danger">*</span></label>
+              <input name="userTelephoneNumber" [(ngModel)]="center.userTelephoneNumber" #userTelephoneNumber="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userTelephoneNumber.invalid}" required   type="number" class="form-control"  >
+          </div>
+          <div class="col-lg-6 mt-2 mb-2">
+                <label style="float:left ;">Country <span class="text-danger">*</span></label>
+              <input name="userCountry"  [(ngModel)]="center.userCountry"  #userCountry="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userCountry.invalid}" required   type="text" class="form-control"  >
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <label style="float:left ;" >City <span class="text-danger">*</span></label>
+              <input name="userCity"  [(ngModel)]="center.userCity"  #userCity="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userCity.invalid}" required   class="form-control"  >
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <label style="float:left ;" >Postal Code <span class="text-danger">*</span><Code></Code></label>
+              <input name="userPostalCode"  [(ngModel)]="center.userPostalCode" #userPostalCode="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userPostalCode.invalid}" required  type="number" class="form-control"  >
+            </div>
+            <div class="col-lg-12 mt-2 mb-2">
+                <label style="float:left ;">Description <span class="text-danger">*</span></label>
+                <textarea name="userDescription"  [(ngModel)]="center.userDescription" #userDescription="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userDescription.invalid}" required   type="text" class="form-control" rows="6">
+                </textarea>
+            </div>
+            
+                <div class="col-lg-8">
+                  <label class="checkbox" style="float:left ;">
+                    <input  [(ngModel)]="terms" type="checkbox" ngModel name="userTerms" >
+                    I've read the <a >Terms and Conditions</a>
+                  </label>
+                </div>
+                <div class="col-lg-12 mb-2" routerLinkActive="active">
+                    <button type="submit" (click)="registerNewCenter(myForm)" class="btn btn-md bv" style="float:left ;">Submit</button>
+                </div>
+              
+               
+                
+      
+      
+            </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+
+    </div>

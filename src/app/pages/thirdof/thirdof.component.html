@@ -1,0 +1,17 @@
+<section class="third" style="padding-top: 100px;">
+    <div class="container">
+        <h1 class="text-center">welcome to Formiw</h1>
+    
+        <div class="row mt-4 " style="align-items: center;">
+            <div class="col-lg-4 mb-5" *ngFor="let cs of third">
+                <div class="box shadow-sm">
+                    <img srcset="{{cs.image}}" width="100%">
+                    <h4 class="mt-2 text-center">{{cs.name}}</h4>
+                    <button class="btn btn-dark btn-sm mt-2 text-center" routerLink="{{cs.linkpage}}">sign up</button>
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
+    </section>

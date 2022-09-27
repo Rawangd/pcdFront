@@ -1,0 +1,52 @@
+<section class="course" style="padding-top: 80px;">
+    
+  <!---  <form [formGroup]="foodForm">
+        price: <input type="number" name="" id="" formControlName="price" class="form-control">
+      courseName: <input type="text" name="" id="" formControlName="courseName" class="form-control">
+    
+      <label  for="gender" >Category </label>
+      <br>
+      <select class="form-control"  name="category" formControlName="category" style="width:245px;height:39px;border-radius: 20px;" >
+     <option value=""></option>
+        <option value="Male" >Mathématique</option>
+        <option value="Female">Spanish</option>
+        <option value="Anglais">Anglais</option>
+        <option value="Français">Français</option>
+        <option value="Informatique">Informatique</option>
+        <option value="Physique">Physique</option>
+        <option value="Sport">Sport</option>
+        <option value="Dance">Dance</option>
+      </select >
+      Former's Name: <input type="text" name="" id="" formControlName="formerName" class="form-control">
+      Former's Email: <input type="email" name="" id="" formControlName="formerEmail" class="form-control">
+    
+      description: <input type="text" name="" id="" formControlName="description" class="form-control">
+      Picture: <input type="file" name="" id="" formControlName="picture" class="form-control" (change)="fnChange({event : $event})"><br>
+        <input type="button" value="Add" class="btn btn-success" (click)="fnAdd()">&nbsp;
+        <input type="button" value="Modify" class="btn btn-warning">&nbsp;
+        <input type="button" value="Delete" class="btn btn-danger">&nbsp;
+    
+    </form>
+    <br>
+    {{ foodForm.value | json}}
+    <br>-->
+   
+   <div class="container">
+    <h1 class="text-center " style="color: darkslategray;" ><strong>All Categories</strong> </h1>
+        <div class="row mt-5" >
+            <div class="col-lg-3 mb-5" *ngFor="let c of course"  >
+                <div class="cover" style="height: 150px;" routerLink="{{c.linkpage}}">
+                    
+                    <h3>{{c.name}}</h3>
+                    <div class="bg" style="background-image:url({{c.image}}); height: 150px; " >
+                        
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+       
+    
+    </div>
+    </section>

@@ -1,0 +1,98 @@
+<div class="main-content "  >
+  <div class="container-fluid mt-5" style="padding-top: 60px; margin-left: auto; margin-right: auto;">
+     <br>
+    
+       <form #myForm="ngForm"  (ngSubmit)="myForm.valid && registerNewStudent(myForm)"  class="register col-lg-6 m-auto " style="font-weight: bold ;font-size: 1.2em;" >
+          <div class="col-md-12 " >
+            
+            <div class="card  mr-4 shadow-lg " style="border-radius: 7px; width: 800px; padding: 30px; margin-left: auto; margin-right: auto;">
+              <a style=" text-align:center; " ><img src="../../../assets/img/welearn4.png" sizes="60px" alt="..." height="60px"> </a>
+          
+              <h2 class="col-lg-6  m-auto" style="font-weight: bold ;font-size: 2em;align-items: center; text-align: center;">Learner Registration</h2><br>
+              
+          <!--- <div class="alert alert-danger" *ngIf="userPassword!=userConfirmPassword" > 
+            <strong>The username or password is incorrect. Try again.</strong>
+          </div>-->
+            <div class="row">
+              <div class="alert alert-danger" *ngIf='invalidLogin'>{{errorMessage}}</div>
+        
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label >Full Name <span class="text-danger">*</span></label>
+                    <input  name="userFullName"  [(ngModel)]="user.userFullName" #userFullName="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userFullName.invalid}" required type="text" class="form-control"  >
+                </div>
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label >UserName <span class="text-danger">*</span></label>
+                    <input  name="userName"  [(ngModel)]="user.userName"  type="text" #userName="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userName.invalid}" required class="form-control"  >
+                </div>
+                
+                <div class="col-lg-12 mt-2 mb-2">
+                    <label >Email <span class="text-danger">*</span></label>
+                    <input name="userEmail"  [(ngModel)]="user.userEmail"  #userEmail="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userEmail.invalid}" required type="email"  class="form-control"  >
+                </div>
+                
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label >Password <span class="text-danger">*</span></label>
+                  <input  name="userPassword"  [(ngModel)]="user.userPassword"  #userPassword="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userPassword.invalid}" required   type="password" class="form-control"  >
+              </div>
+              <div class="col-lg-6 mt-2 mb-2">
+                <label >Confirm Password <span class="text-danger">*</span></label>
+                <input  name="userConfirmPassword"  ngModel   #userConfirmPassword="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userConfirmPassword.invalid}" required  type="password"  class="form-control" >
+            </div>
+            <div class="col-lg-12 mt-2 mb-2">
+                <label >Address <span class="text-danger">*</span></label>
+              <input  name="userAddress"  [(ngModel)]="user.userAddress"  #userAddress="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userAddress.invalid}" required  type="text" class="form-control"  >
+            </div>
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label >Birthday <span class="text-danger">*</span></label>
+                    <input  name="userBirthday"  [(ngModel)]="user.userBirthday"  #userBirthday="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userBirthday.invalid}" required type="date" class="form-control"  >
+                </div>
+                <div class="col-lg-6 mt-2 mb-2">
+                    <label  for="gender" >Gender <span class="text-danger">*</span></label>
+                    <br>
+                    <select class="form-control" [(ngModel)]="user.userGender" name="userGender"  #userGender="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userGender.invalid}" required id="gender" style="width:347px;height:39px;border-radius: 20px;" >
+                   <option value=""></option>
+                      <option value="Male" >Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select >
+              </div>
+              <div class="col-lg-6 mt-2 mb-2">
+                <label >Telephone Number <span class="text-danger">*</span></label>
+              <input name="userTelephoneNumber"  [(ngModel)]="user.userTelephoneNumber" #userTelephoneNumber="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userTelephoneNumber.invalid}" required  type="number" class="form-control"  >
+          </div>
+          <div class="col-lg-6 mt-2 mb-2">
+                <label >Country <span class="text-danger">*</span></label>
+              <input name="userCountry"  [(ngModel)]="user.userCountry" #userCountry="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userCountry.invalid}" required type="text" class="form-control"  >
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <label >City <span class="text-danger">*</span></label>
+              <input name="userCity"  [(ngModel)]="user.userCity" #userCity="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userCity.invalid}" required type="text" class="form-control"  >
+            </div>
+            <div class="col-lg-6 mt-2 mb-2">
+                <label >Postal Code <span class="text-danger">*</span><Code></Code></label>
+              <input name="userPostalCode"  [(ngModel)]="user.userPostalCode" #userPostalCode="ngModel" [ngClass]="{'is-invalid':myForm.submitted && userPostalCode.invalid}" required type="number" class="form-control"  >
+            </div>
+         
+                <div class="col-lg-8">
+                  <label class="checkbox">
+                    <input   [(ngModel)]="terms" type="checkbox" ngModel name="userTerms"  >
+                    I've read the <a >Terms and Conditions</a>
+                  </label>
+                </div>
+                <div class="col-lg-12 mb-2" routerLinkActive="active">
+                    <button (click)="registerNewStudent(myForm)" type="submit" id="register" class="btn btn-md bv">Submit</button>
+                </div>
+              
+               
+                
+      
+      
+            </div>
+          </div>
+        </div>
+        
+        </form>
+      </div>
+     
+
+    </div>

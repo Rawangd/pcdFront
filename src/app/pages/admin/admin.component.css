@@ -1,0 +1,37 @@
+.course
+{
+    background-color: #eff6ff;
+    padding: 50px 100px;
+}
+img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.box
+{
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+.btn{
+    padding-left: 5px;
+    border-bottom-left-radius: 20px;
+    background-color: #261d51;
+    border-top-right-radius: 20px;
+}
+@media screen and (max-width:600px)
+{
+    .course
+{
+    background-color: #eff6ff;
+    padding: 50px 10px;
+}
+}
+.gha{
+    height: 140px;
+    width: 315px;
+   
+    padding: 3px;
+ 
+    
+  }

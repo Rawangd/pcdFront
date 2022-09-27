@@ -1,0 +1,28 @@
+<section class="joinnow" style="padding-top: 200px;">
+  <div class="login col-lg-6 m-auto shadow-lg">
+    <div class="alert alert-danger" *ngIf="erreur==1" > 
+    <!-- <strong>login ou mot de passe erronés..</strong>--> 
+      <strong>The username or password is incorrect. Try again.</strong>
+    </div>
+    <div style="text-align: center;">
+    <a   ><img src="../../../assets/img/welearn4.png" sizes="60px" alt="..." height="60px"  > </a>
+        
+            <h2 class="col-lg-6  m-auto" style="font-weight: bold ;font-size: 2em;align-items: center; text-align: center; color: #261d51;">LOGIN</h2><br>
+          </div>    
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" style="font-weight: bold ;font-size: 1.2em;">
+          <div class="form-group" >
+            <label for="exampleInputEmail1">UserName</label>
+            <input ngModel
+            name="userName"   id="userName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input  ngModel
+            name="userPassword"
+            id="userPassword" type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="bv col-lg-12">Log In</button>
+        </form>
+
+  </div>
+</section>

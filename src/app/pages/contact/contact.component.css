@@ -1,0 +1,14 @@
+.bv2{
+    background-color: #261d51;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    
+}
+

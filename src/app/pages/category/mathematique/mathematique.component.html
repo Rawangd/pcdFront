@@ -1,0 +1,50 @@
+<section class="course" style="padding-top: 80px;">
+  
+  <div class="container">
+    <h1 class="text-center"><strong>Maths </strong></h1>
+      
+    <div class="row mt-5" >
+      <div class="col-lg-4 mb-5" *ngFor="let c of courses">
+               
+       <div class="card card-one" >
+         <div class="multi-button" *ngIf="isLoggedIn()">
+           <button class="fas fa-heart"></button>
+           <button class="fas fa-star" type="button" (click)="favorite(c.id)"   ></button>
+         </div>
+         <header>
+           <div class="avatar">
+            <img srcset="data:image/png;base64,{{c.picture}}"  style="cursor:pointer;" (click)="clicklink(c.formerEmail,c.courseName,c.id)" />
+          </div>
+         </header>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+         <h3>{{c.formerName}}</h3>
+         <div class="desc " style="font-weight:bold; font-size: large; opacity:90%;">
+           <i class="fa fa-book"></i>
+           {{c.courseName}}</div>
+           <div class="contacts" style="display: block;">
+             <a href=""><i class="fa fa-location-arrow" style ="font-size: 24px;" ></i><span style="margin-left:10px;">{{c.city}}</span></a>
+             <a href=""><i class="fa fa-phone" style ="font-size: 22px;"></i><span style="margin-left:10px;" >{{c.phoneNumber}}</span></a>
+             <a href=""><i class="fa fa-envelope"></i><span style="margin-left:10px;">{{c.formerEmail}}</span></a>
+             <a href=""><i class="fa fa-money"></i><span style="margin-left:10px;">{{c.price}}  <strong>DT</strong></span></a>
+             <div class="clear"></div>
+           </div>
+     
+         <footer>
+           <a href=""><i class="fab fa-facebook"></i></a>
+           <a href=""><i class="fab fa-linkedin"></i></a>
+           <a href=""><i class="fab fa-twitter"></i></a>
+           <a href=""><i class="fab fa-instagram"></i></a>
+         </footer>
+       </div>
+     
+   </div>
+   
+       
+    
+  
+   
+       </div>
+   
+  
+  </div>

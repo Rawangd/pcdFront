@@ -1,0 +1,21 @@
+<div class="row mt-5 col-lg-12 " style="background-color: aliceblue; padding-top: 80px; "  >
+    <h4 class="text-center" style="text-decoration: underline; padding-bottom: 1cm; padding-left: 1cm; font-weight: bold; ">NOTIFICATIONS<i class="bi bi-bell"></i></h4> 
+    
+    <div class="col-lg-12 mb-5  mr-3 " *ngFor="let cs of course">
+        <div class="box shadow-sm ml-5 mr-5">
+            <div class="row">
+            <div class="col-lg-4">
+            <img srcset="{{cs.image}}" width="100%" class="gha">
+            </div>
+            <div class="col-lg-8">
+            <p class="mt-2" style="font-weight: bold;">{{cs.name}}</p>
+            <h6 class="mt-2" >{{cs.firstname}}</h6>
+            <p clas="mt-2" style="color: dimgrey; font-size: small;">{{cs.description}}</p>
+        
+            <button class="btn btn-dark btn-sm mt-2" >Read message <i class="bi bi-envelope"></i> </button>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>

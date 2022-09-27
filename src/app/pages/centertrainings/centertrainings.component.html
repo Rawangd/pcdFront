@@ -1,0 +1,44 @@
+<section class="course" style="padding-top: 80px;">
+  
+    <div class="container">
+      <h1 class="text-center"><strong>All center trainings </strong></h1>
+        
+      <div class="row mt-5" >
+             <div class="col-lg-4 mb-5" *ngFor="let cc of courses">
+               
+       <div class="card card-two" style="cursor:pointer ;">
+        
+         <header>
+          
+         </header>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+         <h2>{{cc.centerName}}</h2>
+         <div class="desc " style="font-weight:bold; font-size: large; opacity:90%;">
+           <i class="fa fa-book"></i>&nbsp;{{cc.courseName}}
+           </div>
+           <p class="date"><i class="fa fa-calendar"></i>&nbsp; {{cc.date}}</p>
+         <div class="contacts" style="display: block;">
+           <a href=""><i class="fa fa-location-arrow"></i><span style="margin-left:10px;"> {{cc.city}}</span></a>
+           <a href=""><i class="fa fa-phone"></i><span style="margin-left:10px;" >{{cc.phoneNumber}}</span></a>
+           <a href=""><i class="fa fa-envelope"></i><span style="margin-left:10px;">{{cc.centerEmail}}</span></a>
+           <a href=""><i class="fa fa-money" ></i><span style="margin-left:10px;">{{cc.price}} <strong>DT</strong></span></a>
+          
+           <div class="clear"></div>
+         </div>
+     
+         <footer>
+           <a href=""><i class="fab fa-facebook"></i></a>
+           <a href=""><i class="fab fa-linkedin"></i></a>
+           <a href=""><i class="fab fa-twitter"></i></a>
+           <a href=""><i class="fab fa-instagram"></i></a>
+          
+         </footer>
+       </div>
+     </div>
+     
+         </div>
+     
+    
+    </div>
+  

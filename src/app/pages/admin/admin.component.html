@@ -1,0 +1,22 @@
+<section class="course" style="padding-top: 80px;">
+    
+
+    <div class="container">
+     <h1 class="text-center"><strong>All Users</strong> </h1>
+         <div class="row " style="margin-top: 160px;" >
+             <div class="col-lg-3 mb-5" *ngFor="let c of users"  >
+                 <div  class="box shadow-sm" style="background:linear-gradient(to bottom right,#90caf9,#fff )" >
+                     
+                     <h1 class="mt-2"><strong>{{c.roleName}}</strong></h1>
+                     
+                     <button class="btn btn-dark btn-sm mt-2" routerLink="{{c.linkpage}}">View
+                     </button>
+                    <!--<h1 *ngIf {{c.category}}="Informatique" >hello</h1>--> 
+                 </div>
+     
+             </div>
+         </div>
+     
+        
+     </div>
+     </section>
